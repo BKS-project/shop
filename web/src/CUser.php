@@ -4,20 +4,17 @@ class CUser {
   private $m_id;
   private $m_login;
   private $m_privileges;
-  private $m_pass;
   private $db;
 
-  function __construct($db, $login) {
+  function __construct($db, $login, $password) {
     $this->m_login = $login;
     $this->db = $db;
-    $this->get();
-  }
 
-  /**
-   * @access public
-   */
-  public function getPwHash() {
-    return $this->m_pass;
+    if ($this->login($password)) {
+      $this->get();
+    } else {
+      return false;
+    }
   }
 
   /**
@@ -39,29 +36,27 @@ class CUser {
    */
   private function fetch() {
     $result = $this->db->get("SELECT id, login, pass, privileges FROM users WHERE login = :login;",
-		      array(":login" => $this->login));
+			     array(":login" => $this->m_login));
 
     $row = $result[0];
     $this->m_id = $row["id"];
     $this->m_login = $row["login"];
-    $this->m_isAdmin = $row["isadmin"];
-    $this->m_pass = $row["pass"];
-    
+    $this->m_privileges = $row["privileges"];
+
     return $row;
   }
 
   /**
-   * @access public
+   * @access private
    */
-  public function login($pass) {
+  private function login($pass) {
     $result = $this->db->get("SELECT pass FROM users WHERE login = :login",
-		       array(":login" => $this->login));
+			     array(":login" => $this->m_login));
 
     if (password_verify($pass, $result[0]["pass"])) {
-      $this->get();
-    } else {
-      throw new \Exception("Nieprawidłowy użytkownik lub hasło");
+      return true;
     }
+    return false;
   }
 
   /**
@@ -71,6 +66,6 @@ class CUser {
     $pass = password_hash($password, PASSWORD_BCRYPT);
 
     $num = $this->db->post("UPDATE users SET pass = :pass WHERE login = :login;",
-      array(":pass" => $pass, ":login" => $this->login));
+			   array(":pass" => $pass, ":login" => $this->m_login));
   }
 }
