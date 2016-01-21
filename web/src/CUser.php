@@ -11,7 +11,7 @@ class CUser {
     $this->db = $db;
 
     if ($this->login($password)) {
-      $this->get();
+      $this->fetch();
     } else {
       return false;
     }
