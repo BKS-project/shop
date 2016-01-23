@@ -47,9 +47,9 @@ class CUser {
   }
 
   /**
-   * @access private
+   * @access public
    */
-  private function login($pass) {
+  public function login($pass) {
     $result = $this->db->get("SELECT pass FROM users WHERE login = :login",
 			     array(":login" => $this->m_login));
 
@@ -67,5 +67,9 @@ class CUser {
 
     $num = $this->db->post("UPDATE users SET pass = :pass WHERE login = :login;",
 			   array(":pass" => $pass, ":login" => $this->m_login));
+  }
+
+  public function register() {
+    // not yet implemented
   }
 }

@@ -1,7 +1,7 @@
 <?php
 /**
  * @access public
- * @author £uki
+ * @author ï¿½uki
  */
 class CBasket {
 	private $m_ID;
@@ -34,6 +34,10 @@ class CBasket {
 	 */
 	public function __destruct() {
 		// Not yet implemented
+	}
+
+	public function getItems() {
+		// not yet implemented
 	}
 }
 ?>

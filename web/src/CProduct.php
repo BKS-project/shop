@@ -50,4 +50,12 @@ class CProduct {
   public function removeProduct() {
     // not yet implemented
   }
+
+  public function get($id) {
+    // not yet implemented
+  }
+
+  public function getAll() {
+    // not yet implemented
+  }
 }
