@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sklep z grami planszowymi - Inżynieria Oprogramowania</title>
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="js/jquery.min.js"></script>
+<!-- Custom Theme files -->
+<!--theme-style-->
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />	
+<!--//theme-style-->
+<meta Name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta Name="keywords" content="Dr. Federov, Inżynieria Oprogramowania, UML" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!--fonts-->
+<link href='//fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css'><!--//fonts-->
+<!-- start menu -->
+<link href="css/memenu.css" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript" src="js/memenu.js"></script>
+<script>$(document).ready(function(){$(".memenu").memenu();});</script>
+<script src="js/simpleCart.min.js"> </script>
+</head>
+<body>
+<!--header-->
+<div class="header">
+	<div class="header-top">
+		<div class="container">
+			<div class="search">
+					<form>
+						<input type="text" value="Szukaj " onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}">
+						<input type="submit" value="Go">
+					</form>
+			</div>
+			<div class="header-left">		
+					<ul>
+						<li ><a class="lock"  href="login.html"  >Logowanie</a></li>
+						<li><a class="lock" href="register.html"  >Rejestracja</a></li>
+						<li>
+</li>
+
+					</ul>
+					<div class="cart box_1">
+						<a href="checkout.html">
+						<h3> <div class="total">
+							<span class="simpleCart_total"></span> (<span id="simpleCart_quantity" class="simpleCart_quantity"></span> produktów)</div>
+							<img src="images/cart.png" alt=""/></h3>
+						</a>
+												<p><a href="javascript:;" class="simpleCart_empty">Pusty Koszyk</a></p>
+
+					</div>
+					<div class="clearfix"> </div>
+			</div>
+		</div>
+		</div>
+		<div class="container">
+			<div class="head-top">
+				<div class="logo">
+					<a href="index.html"><img src="images/logo.png" alt=""></a>	
+				</div>
+		  <div class=" h_menu4">
+					<ul class="memenu skyblue">
+					  <li class="active grid"><a class="color8" href="index.html">Home</a></li>	
+				      <li><a class="color1" href="#">Planszówki</a>
+				      	<div class="mepanel">
+						<div class="row">
+							<div class="col1">
+								<div class="h_nav">
+									<ul>
+										<li><a href="products.html">Familijne</a></li>
+										<li><a href="products.html">Przygodowe</a></li>
+										<li><a href="products.html">Imprezowe</a></li>
+										<li><a href="products.html">Karciane</a></li>
+										<li><a href="products.html">Edukacyjne</a></li>
+										<li><a href="products.html">Logiczne</a></li>
+										<li><a href="products.html">Łamigłówki</a></li>
+										<li><a href="products.html">Strategiczne</a></li>
+										<li><a href="products.html">Inne</a></li>							
+									</ul>	
+								</div>							
+							</div>
+							
+						  </div>
+						</div>
+					</li>
+				    
+			    <li><a class="color4" href="blog.html">Blog</a></li>				
+				<li><a class="color6" href="contact.html">Kontakt</a></li>
+			  </ul> 
+			</div>
+				
+				<div class="clearfix"> </div>
+		</div>
+		</div>
+
+	</div>
+
+
+	
+<!--content-->
+<!---->
+		<div class="product">
+			<div class="container">
+				<div class="col-md-3 product-price">
+					  
+				<div class=" rsidebar span_1_of_left">
+					<div class="of-left">
+										<h3 class="cate">Kategoria</h3>
+					</div>
+		 <ul class="menu">
+		 	<li class="item1"><a href="#">Familijne </a>
+				</li>
+		<li class="item2"><a href="#">Przygodowe </a>
+				</li>
+		<li class="item3"><a href="#">Imprezowe </a>
+			
+		</li>
+		<li class="item4"><a href="#">Karciane</a>
+			
+		</li>
+		<li class="item5"><a href="#">Edukacyjne</a>
+				</li>
+
+		<li class="item6"><a href="#">Logiczne</a>
+				</li>
+
+		<li class="item7"><a href="#">Łamigłówki</a>
+				</li>
+
+		<li class="item8"><a href="#">Strategiczne</a>
+				</li>
+
+		<li class="item9"><a href="#">Inne</a>
+				</li>
+
+				
+		
+	
+				
+	
+	</ul>
+					</div>
+				<!--initiate accordion-->
+		<script type="text/javascript">
+			$(function() {
+			    var menu_ul = $('.menu > li > ul'),
+			           menu_a  = $('.menu > li > a');
+			    menu_ul.hide();
+			    menu_a.click(function(e) {
+			        e.preventDefault();
+			        if(!$(this).hasClass('active')) {
+			            menu_a.removeClass('active');
+			            menu_ul.filter(':visible').slideUp('normal');
+			            $(this).addClass('active').next().stop(true,true).slideDown('normal');
+			        } else {
+			            $(this).removeClass('active');
+			            $(this).next().stop(true,true).slideUp('normal');
+			        }
+			    });
+			
+			});
+		</script>
+<!---->
+
+				<!---->
+		
+
+				</div>
+				<div class="col-md-9 product-price1">
+				<div class="col-md-5 single-top">	
+			<div class="flexslider">
+  <ul class="slides">
+    <li data-thumb="images/si.jpg">
+      <img src="images/si.jpg" />
+    </li>
+    <li data-thumb="images/si1.jpg">
+      <img src="images/si1.jpg" />
+    </li>
+    <li data-thumb="images/si2.jpg">
+      <img src="images/si2.jpg" />
+    </li>
+    <li data-thumb="images/si.jpg">
+      <img src="images/si.jpg" />
+    </li>
+  </ul>
+</div>
+<!-- FlexSlider -->
+  <script defer src="js/jquery.flexslider.js"></script>
+<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
+
+<script>
+// Can also be used with $(document).ready()
+$(window).load(function() {
+  $('.flexslider').flexslider({
+    animation: "slide",
+    controlNav: "thumbnails"
+  });
+});
+</script>
+					</div>	
+					<div class="col-md-7 single-top-in simpleCart_shelfItem">
+						<div class="single-para ">
+						<h4>Lorem Ipsum</h4>
+							<div class="star-on">
+								<ul class="star-footer">
+										<li><a href="#"><i> </i></a></li>
+										<li><a href="#"><i> </i></a></li>
+										<li><a href="#"><i> </i></a></li>
+										<li><a href="#"><i> </i></a></li>
+										<li><a href="#"><i> </i></a></li>
+									</ul>
+								<div class="review">
+									<a href="#"> 1 recenzja użytkownika</a>
+									
+								</div>
+							<div class="clearfix"> </div>
+							</div>
+							
+							<h5 class="item_price">$ 95.00</h5>
+							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed 
+diam nonummy nibh euismod tincidunt ut laoreet dolore 
+magna aliquam erat </p>
+						
+						
+								<a href="#" class="add-cart item_add">Dodaj do koszyka</a>
+							
+						</div>
+					</div>
+				<div class="clearfix"> </div>
+			<!---->
+					<div class="cd-tabs">
+			<nav>
+				<ul class="cd-tabs-navigation">
+					<li><a data-content="fashion"  href="#0">Opis </a></li>
+					<li><a data-content="cinema" href="#0" >Dodatkowe informacje</a></li>
+					<li><a data-content="television" href="#0" class="selected ">Recenzja (1)</a></li>
+					
+				</ul> 
+			</nav>
+	<ul class="cd-tabs-content">
+
+<li data-content="cinema" >
+
+
+</li>
+<li data-content="television" class="selected">
+	<div class="comments-top-top">
+				<div class="top-comment-left">
+					<img class="img-responsive" src="images/co.png" alt="">
+				</div>
+				<div class="top-comment-right">
+					<h6><a href="#">Mariusz</a> - Styczeń 03, 2016</h6>
+					<ul class="star-footer">
+										<li><a href="#"><i> </i></a></li>
+										<li><a href="#"><i> </i></a></li>
+										<li><a href="#"><i> </i></a></li>
+										<li><a href="#"><i> </i></a></li>
+										<li><a href="#"><i> </i></a></li>
+									</ul>
+									<p>Wow nice!</p>
+				</div>
+				<div class="clearfix"> </div>
+				<a class="add-re" href="#">Dodaj recenzje</a>
+			</div>
+
+</li>
+<div class="clearfix"></div>
+	</ul> 
+</div> 
+		<div class=" bottom-product">
+					<div class="col-md-4 bottom-cd simpleCart_shelfItem">
+						<div class="product-at ">
+							<a href="#"><img class="img-responsive" src="images/pi3.jpg" alt="">
+							<div class="pro-grid">
+										<span class="buy-in">Kup teraz</span>
+							</div>
+						</a>	
+						</div>
+						<p class="tun">Krótki opis</p>
+						<a href="#" class="item_add"><p class="number item_price"><i> </i>$500.00</p></a>						
+					</div>
+					<div class="col-md-4 bottom-cd simpleCart_shelfItem">
+						<div class="product-at ">
+							<a href="#"><img class="img-responsive" src="images/pi1.jpg" alt="">
+							<div class="pro-grid">
+										<span class="buy-in">Kup teraz</span>
+							</div>
+						</a>	
+						</div>
+						<p class="tun">Krótki opis</p>
+<a href="#" class="item_add"><p class="number item_price"><i> </i>$500.00</p></a>					</div>
+					<div class="col-md-4 bottom-cd simpleCart_shelfItem">
+						<div class="product-at ">
+							<a href="#"><img class="img-responsive" src="images/pi4.jpg" alt="">
+							<div class="pro-grid">
+										<span class="buy-in">Kup teraz</span>
+							</div>
+						</a>	
+						</div>
+						<p class="tun">Krótki opis</p>
+<a href="#" class="item_add"><p class="number item_price"><i> </i>$500.00</p></a>					</div>
+					<div class="clearfix"> </div>
+				</div>
+</div>
+
+		<div class="clearfix"> </div>
+		</div>
+		</div>
+<!--//content-->
+<div class="footer">
+				<div class="container">
+			<div class="footer-top-at">
+			
+				<div class="col-md-4 amet-sed">
+				<h4>Więcej informacji</h4>
+				<ul class="nav-bottom">
+						<li><a href="#">Jak zamówić</a></li>
+						<li><a href="#">FAQ</a></li>
+						<li><a href="contact.html">Lokalizacja</a></li>
+						<li><a href="#">Członkostwo</a></li>	
+					</ul>	
+				</div>
+				<div class="col-md-4 amet-sed ">
+				<h4>Skontaktuj się z nami</h4>
+				
+					<p>Gdzie nas znajdziesz</p>
+					<p>Naciśnij mnie i wyślij maila</p>
+					<p>Biuro: 732 305 447 </p>
+					<ul class="social">
+						<li><a href="#"><i> </i></a></li>						
+						<li><a href="#"><i class="twitter"> </i></a></li>
+						<li><a href="#"><i class="rss"> </i></a></li>
+						<li><a href="#"><i class="gmail"> </i></a></li>
+						
+					</ul>
+				</div>
+				<div class="col-md-4 amet-sed">
+					<h4>Newsletter</h4>
+					<p>Zapisz się i bądź na bieżąco</p>
+					<form>
+						<input type="text" value="" onfocus="this.value='';" onblur="if (this.value == '') {this.value ='';}">
+						<input type="submit" value="Sign up">
+					</form>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+		<div class="footer-class">
+		<p >© 2016 Gry planszowe. Wszystkie prawa zachowane  | Design by  <a href="http://kio.wi.zut.edu.pl/dydaktyka/konsultacje" target="_blank">Msz</a> </p>
+		</div>
+		</div>
+</body>
+</html>	
